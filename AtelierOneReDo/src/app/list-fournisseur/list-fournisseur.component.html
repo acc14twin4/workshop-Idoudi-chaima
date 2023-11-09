@@ -1,0 +1,19 @@
+<p>list-fournisseur works!</p>
+<div *ngFor="let f of list">
+    <fieldset [ngStyle]="{'background-color':(f.libelle == 'hp' ? '#7DCEA0': '#F9E79F' )}"
+        (dblclick)="supprimerFournisseur(f.idFournisseur)">
+        <!-- <fieldset [style.background-color]="f.libelle === 'hp' ? 'green' : 'yellow'"> -->
+        <legend [ngStyle]="{'font-weight': (f.code.startsWith('2A') ? 'bold' : 'normal')}">Fournisseur: {{
+            f.idFournisseur }}</legend>
+        <P>Code: {{f.code}}</P>
+        <p>Libelle : {{f.libelle}}</p>
+    </fieldset>
+</div>
+<h3>-------------Only with id>=100!-------------</h3>
+<div *ngFor="let f of list">
+    <fieldset *ngIf="f.idFournisseur>100">
+        <legend>Fournisseur : {{f.idFournisseur}}</legend>
+        <P>Code: {{f.code}}</P>
+        <p>Libelle : {{f.libelle}}</p>
+    </fieldset>
+</div>
