@@ -1,0 +1,14 @@
+<p>list-product works!</p>
+<div *ngFor="let p of ListProduct">
+    <p>{{p.id}}</p>
+    <p>{{p.code}}</p>
+    <p>{{p.libelle}}</p>
+    <p>{{p.prixunitaire}}</p>
+    <p>{{p.tauxTva}}</p>
+    <button>Calculer</button>
+</div>
+<div>
+    <h3 style="color: blue;"> le nombre de produits existant dans la liste et ayant le libelle passé en
+        argument.</h3>
+    {{counting}}
+</div>
