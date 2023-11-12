@@ -1,0 +1,10 @@
+<p>list-user works!</p>
+<div *ngFor="let user of listUsers">
+  <div>
+    <strong>{{ user.firstName }}</strong>
+    <p>Email: {{ user.email }}</p>
+    <!-- Ajoutez d'autres propriétés de l'utilisateur que vous souhaitez afficher -->
+    <button (click)="deleteUser(user.id)">Supprimer</button>
+  </div>
+</div>
+<br>
